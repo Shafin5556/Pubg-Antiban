@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{27184066-1EDF-4CE0-B6E4-5B09B7C9D327}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DEXSTER</RootNamespace>
+    <AssemblyName>DEXSTER_SMART</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon %281%29.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>..\..\..\File\dll\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\File\dll\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Siticone.UI">
+      <HintPath>..\..\..\File\dll\Siticone.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest" />
+    <None Include="bin\Debug\New folder\ui\AndroidEmulator.tpc" />
+    <None Include="bin\Debug\New folder\ui\AndroidEmulator1.tpc" />
+    <None Include="bin\Debug\New folder\ui\AowConfig.ini" />
+    <None Include="bin\Debug\New folder\ui\AowConfig1.ini" />
+    <None Include="bin\Debug\New folder\ui\AOW_DRV.SYS" />
+    <None Include="bin\Debug\New folder\ui\AOW_DRV1.SYS" />
+    <None Include="bin\Debug\New folder\ui\AOW_DRV_X64.SYS" />
+    <None Include="bin\Debug\New folder\ui\AOW_DRV_X641.SYS" />
+    <None Include="bin\Debug\New folder\ui\aow_drv_x64_ev.sys" />
+    <None Include="bin\Debug\New folder\ui\aow_drv_x64_ev1.sys" />
+    <None Include="bin\Debug\New folder\ui\apk.conf" />
+    <None Include="bin\Debug\New folder\ui\apk_44.conf" />
+    <None Include="bin\Debug\New folder\ui\bugtrace.flag" />
+    <None Include="bin\Debug\New folder\ui\cmd.conf" />
+    <None Include="bin\Debug\New folder\ui\Config.ini" />
+    <None Include="bin\Debug\New folder\ui\libEGL.log" />
+    <None Include="bin\Debug\New folder\ui\multiDexApk.conf" />
+    <None Include="bin\Debug\New folder\ui\opengl.conf" />
+    <None Include="bin\Debug\New folder\ui\QMNetworkMgr.ini" />
+    <None Include="bin\Debug\New folder\ui\render.dat" />
+    <None Include="bin\Debug\New folder\ui\smk.conf" />
+    <None Include="bin\Debug\New folder\ui\smka.conf" />
+    <None Include="bin\Debug\New folder\ui\translate.conf" />
+    <None Include="bin\Debug\New folder\ui\translateex.conf" />
+    <None Include="bin\Debug\New folder\ui\vmconfig.ini" />
+    <None Include="bin\Debug\New folder\ui\whitelist.conf" />
+    <None Include="bin\Debug\New folder\ui\wztimer.conf" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\High_Ver.ini" />
+    <None Include="Resources\Low_Ver.ini" />
+    <None Include="Resources\Normal_Ver.ini" />
+    <None Include="Resources\Smart_Ver.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\New folder\ui\adb.exe" />
+    <None Include="bin\Debug\New folder\ui\AdbWinApi.dll" />
+    <None Include="bin\Debug\New folder\ui\AECommonDll.dll" />
+    <None Include="bin\Debug\New folder\ui\AEngine.dll" />
+    <None Include="bin\Debug\New folder\ui\AEngineUtil.dll" />
+    <None Include="bin\Debug\New folder\ui\AndroidEmulator.exe" />
+    <None Include="bin\Debug\New folder\ui\AndroidRenderer.exe" />
+    <None Include="bin\Debug\New folder\ui\aow_exe.exe" />
+    <None Include="bin\Debug\New folder\ui\aow-install-apk.xml" />
+    <None Include="bin\Debug\New folder\ui\aow-install-apk-100.xml" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-console-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-datetime-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-debug-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-errorhandling-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-file-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-file-l1-2-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-file-l1-2-1.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-file-l2-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-handle-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-heap-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-interlocked-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-libraryloader-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-localization-l1-2-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-memory-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-namedpipe-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-processenvironment-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-processthreads-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-processthreads-l1-1-1.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-profile-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-rtlsupport-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-string-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-synch-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-synch-l1-2-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-sysinfo-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-timezone-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-util-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-conio-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-convert-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-environment-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-filesystem-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-heap-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-locale-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-math-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-multibyte-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-private-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-process-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-runtime-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-stdio-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-string-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-time-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-crt-utility-l1-1-0.dll" />
+    <None Include="bin\Debug\New folder\ui\arkFS.dll" />
+    <None Include="bin\Debug\New folder\ui\arkGraphic.dll" />
+    <None Include="bin\Debug\New folder\ui\arkImage.dll" />
+    <None Include="bin\Debug\New folder\ui\arkIOStub.dll" />
+    <None Include="bin\Debug\New folder\ui\arkIPC.dll" />
+    <None Include="bin\Debug\New folder\ui\AsyncTask.dll" />
+    <None Include="bin\Debug\New folder\ui\atl80.dll" />
+    <None Include="bin\Debug\New folder\ui\beacon_sdk.dll" />
+    <None Include="bin\Debug\New folder\ui\Common.dll" />
+    <None Include="bin\Debug\New folder\ui\concrt140.dll" />
+    <None Include="bin\Debug\New folder\ui\ConfigPath.xml" />
+    <None Include="bin\Debug\New folder\ui\d3dcompiler_43.dll" />
+    <None Include="bin\Debug\New folder\ui\d3dcompiler_47.dll" />
+    <None Include="bin\Debug\New folder\ui\DefaultKeyMapping.xml" />
+    <None Include="bin\Debug\New folder\ui\dlcore.dll" />
+    <None Include="bin\Debug\New folder\ui\dr.dll" />
+    <None Include="bin\Debug\New folder\ui\dr_backup.dll" />
+    <None Include="bin\Debug\New folder\ui\GameSidebar.xml" />
+    <None Include="bin\Debug\New folder\ui\GF.dll" />
+    <None Include="bin\Debug\New folder\ui\GFRichControl.dll" />
+    <None Include="bin\Debug\New folder\ui\HardwareDetect.xml" />
+    <None Include="bin\Debug\New folder\ui\httpdns.dll" />
+    <None Include="bin\Debug\New folder\ui\libaow.dll" />
+    <None Include="bin\Debug\New folder\ui\libeay32.dll" />
+    <None Include="bin\Debug\New folder\ui\libEGL.dll" />
+    <None Include="bin\Debug\New folder\ui\libEGL_translator.dll" />
+    <None Include="bin\Debug\New folder\ui\libEGL_translator_v3.dll" />
+    <None Include="bin\Debug\New folder\ui\libexpat.dll" />
+    <None Include="bin\Debug\New folder\ui\libfaac.dll" />
+    <None Include="bin\Debug\New folder\ui\libGLES_CM_translator.dll" />
+    <None Include="bin\Debug\New folder\ui\libGLES_CM_translator_v3.dll" />
+    <None Include="bin\Debug\New folder\ui\libGLES_V2_translator.dll" />
+    <None Include="bin\Debug\New folder\ui\libGLES_V2_translator_v3.dll" />
+    <None Include="bin\Debug\New folder\ui\libGLESv1.dll" />
+    <None Include="bin\Debug\New folder\ui\libGLESv2.dll" />
+    <None Include="bin\Debug\New folder\ui\libGLESv3Detect.dll" />
+    <None Include="bin\Debug\New folder\ui\libimagequant.dll" />
+    <None Include="bin\Debug\New folder\ui\libjpegturbo.dll" />
+    <None Include="bin\Debug\New folder\ui\libMMdevSystem.dll" />
+    <None Include="bin\Debug\New folder\ui\libmp4v2.dll" />
+    <None Include="bin\Debug\New folder\ui\libOpenglRender.dll" />
+    <None Include="bin\Debug\New folder\ui\libOpenglRenderV2.dll" />
+    <None Include="bin\Debug\New folder\ui\libOpenglRenderV3.dll" />
+    <None Include="bin\Debug\New folder\ui\libpng.dll" />
+    <None Include="bin\Debug\New folder\ui\libx264-148.dll" />
+    <None Include="bin\Debug\New folder\ui\msvcm80.dll" />
+    <None Include="bin\Debug\New folder\ui\msvcp80.dll" />
+    <None Include="bin\Debug\New folder\ui\msvcp100.dll" />
+    <None Include="bin\Debug\New folder\ui\msvcp140.dll" />
+    <None Include="bin\Debug\New folder\ui\msvcr80.dll" />
+    <None Include="bin\Debug\New folder\ui\msvcr100.dll" />
+    <None Include="bin\Debug\New folder\ui\QMNetWorkMgr.dll" />
+    <None Include="bin\Debug\New folder\ui\SceneTips.xml" />
+    <None Include="bin\Debug\New folder\ui\SimOperator.xml" />
+    <None Include="bin\Debug\New folder\ui\sqlite.dll" />
+    <None Include="bin\Debug\New folder\ui\TerSafe.dll" />
+    <None Include="bin\Debug\New folder\ui\tinyxml.dll" />
+    <None Include="bin\Debug\New folder\ui\tss_api.dll" />
+    <None Include="bin\Debug\New folder\ui\ucrtbase.dll" />
+    <None Include="bin\Debug\New folder\ui\vcomp140.dll" />
+    <None Include="bin\Debug\New folder\ui\vcruntime140.dll" />
+    <None Include="bin\Debug\New folder\ui\xGraphic32.dll" />
+    <None Include="bin\Debug\New folder\ui\xImage.dll" />
+    <None Include="bin\Debug\New folder\ui\xinput1_3.dll" />
+    <None Include="bin\Debug\New folder\ui\xPlatform.dll" />
+    <None Include="bin\Debug\New folder\ui\zlib.dll" />
+    <None Include="bin\Debug\New folder\ui\adb1.exe" />
+    <None Include="bin\Debug\New folder\ui\AdbWinApi1.dll" />
+    <None Include="bin\Debug\New folder\ui\AECommonDll1.dll" />
+    <None Include="bin\Debug\New folder\ui\AEngine1.dll" />
+    <None Include="bin\Debug\New folder\ui\AEngineUtil1.dll" />
+    <None Include="bin\Debug\New folder\ui\AndroidEmulator1.exe" />
+    <None Include="bin\Debug\New folder\ui\AndroidRenderer1.exe" />
+    <None Include="bin\Debug\New folder\ui\aow_exe1.exe" />
+    <None Include="bin\Debug\New folder\ui\aow-install-apk1.xml" />
+    <None Include="bin\Debug\New folder\ui\aow-install-apk-1001.xml" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-console-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-datetime-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-debug-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-errorhandling-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-file-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-file-l1-2-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-file-l1-2-11.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-file-l2-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-handle-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-heap-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-interlocked-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-libraryloader-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-localization-l1-2-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-memory-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-namedpipe-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-processenvironment-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-processthreads-l1-1-11.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-profile-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-rtlsupport-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-string-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-synch-l1-1-01.dll" />
+    <None Include="bin\Debug\New folder\ui\api-ms-win-core-synch-l1-2-01.dll" />
+    <None Include="bin\Debug\New folder\ui\libpng1.dll" />
+    <None Include="bin\Debug\New folder\ui\libx264-1481.dll" />
+    <Content Include="favicon %281%29.ico" />
+    <Content Include="favicon.ico" />
+    <None Include="Resources\Siticone.UI.dll" />
+    <None Include="Resources\Guna.UI2.dll" />
+    <None Include="Resources\Bunifu_UI_v1.52.dll" />
+    <None Include="Resources\DEXGUESTV1.exe" />
+    <None Include="Resources\AdbWinApi.dll" />
+    <None Include="Resources\adb.exe" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 2022.1</PostBuildEvent>
+  </PropertyGroup>
+</Project>
